@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 export const StatisticsSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -27,6 +31,12 @@ export const StatList = styled.ul`
   justify-content: space-around;
   border-top: 1px solid #eeeeee;
   background-color: #f8fbfe;
+`;
+
+export const Item = styled.li`
+  background: ${getRandomHexColor};
+  width: calc(100% / 4);
+  padding: 10px 0;
 `;
 
 export const Label = styled.span`

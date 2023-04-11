@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   StatisticsSection,
   StatList,
+  Item,
   Label,
   Percentage,
   Title,
@@ -15,10 +16,10 @@ export default function Statistics({ title, data }) {
 
       <StatList>
         {data.map(item => (
-          <li key={item.id} className="item">
+          <Item key={item.id}>
             <Label>{item.label}</Label>
             <Percentage>{item.percentage}%</Percentage>
-          </li>
+          </Item>
         ))}
       </StatList>
     </StatisticsSection>
